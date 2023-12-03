@@ -1,0 +1,58 @@
+{{include file="public/header" /}}
+
+<!-- header top nav -->
+{{include file="public/header_top_nav" /}}
+
+<!-- search -->
+{{include file="public/nav_search" /}}
+
+<!-- header nav -->
+{{include file="public/header_nav" /}}
+
+<!-- goods category -->
+{{include file="public/goods_category" /}}
+
+<!-- content start -->
+<div class="am-g my-content">
+    <div class="am-u-md-6 am-u-sm-centered plugins-touristbuy-index am-padding-bottom-xl">
+        {{if !empty($data['query_tips'])}}
+            <div class="am-alert am-alert-warning" data-am-alert>
+                <button type="button" class="am-close">&times;</button>
+                <p>{{$data.query_tips}}</p>
+            </div>
+        {{/if}}
+
+        <div class="am-alert" data-am-alert>
+            <p>1. 仅支持查询销售订单 和 自提订单</p>
+            <p>2. 自提订单收件信息则是自提点 联系人 和 联系电话</p>
+        </div>
+
+        <!-- form start -->
+        <form class="am-form form-validation" method="post" action="{{:PluginsHomeUrl('touristbuy', 'index', 'detail')}}" request-type="form">
+            <div class="am-form-group am-form-group-refreshing">
+                <label>订单号</label>
+                <input type="text" name="order_no" class="am-radius" minlength="1" placeholder="订单号" data-validation-message="请输入订单号" required />
+            </div>
+
+            <div class="am-form-group am-form-group-refreshing am-margin-top-sm">
+                <label>姓名</label>
+                <input type="text" name="name" class="am-radius" minlength="1" placeholder="姓名" data-validation-message="请输入姓名" required />
+            </div>
+
+            <div class="am-form-group am-form-group-refreshing am-margin-top-sm">
+                <label>电话</label>
+                <input type="text" name="tel" class="am-radius" minlength="1" placeholder="电话" data-validation-message="请输入电话" required />
+            </div>
+            
+            <div class="am-form-group am-form-group-refreshing am-margin-top-lg">
+                <button type="submit" class="am-btn am-btn-primary am-radius am-btn-sm am-btn-block btn-loading-example" data-am-loading="{loadingText: '{{:MyLang('processing_tips')}}'}">{{:MyLang('query_title')}}</button>
+            </div>
+        </form>
+        <!-- form end -->
+    </div>
+</div>
+<!-- content end -->
+
+<!-- footer start -->
+{{include file="public/footer" /}}
+<!-- footer end -->

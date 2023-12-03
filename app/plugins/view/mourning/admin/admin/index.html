@@ -1,0 +1,68 @@
+{{include file="public/header" /}}
+
+<!-- right content start  -->
+<div class="content-right">
+    <div class="content">
+        <legend>
+            <span class="am-text-default">哀悼</span>
+            <a href="{{:MyUrl('admin/pluginsadmin/index')}}" class="am-fr am-text-xs am-margin-top-sm am-icon-mail-reply"> {{:MyLang('retreat_title')}}</a>
+        </legend>
+
+        <div class="mourning-content">
+            <div class="items">
+                <label>灰度值</label>
+                <div>
+                    {{if !empty($data['grayscale'])}}
+                        {{$data.grayscale}}
+                    {{else /}}
+                        {{:MyLang('no_setup_tips')}}、{{:MyLang('default_title')}}[ 100 ]
+                    {{/if}}
+                </div>
+            </div>
+
+            <div class="items">
+                <label>整站有效</label>
+                <div>
+                    {{if isset($data['is_all']) and $data['is_all'] eq 1}}
+                        是
+                    {{else /}}
+                        否
+                    {{/if}}
+                </div>
+            </div>
+
+            <div class="items">
+                <label>开启手机端</label>
+                <div>
+                    {{if isset($data['is_app']) and $data['is_app'] eq 1}}
+                        是
+                    {{else /}}
+                        否
+                    {{/if}}
+                </div>
+            </div>
+
+            <div class="items">
+                <label>{{:MyLang('form_time_valid_title')}}</label>
+                <div>
+                    {{if !empty($data['time_start']) and !empty($data['time_end'])}}
+                        {{$data.time_start}} ~ {{$data.time_end}}
+                    {{elseif !empty($data['time_start']) and empty($data['time_end'])}}
+                        {{$data.time_start}} ~ 无过期时间
+                    {{elseif empty($data['time_start']) and !empty($data['time_end'])}}
+                        立即生效 ~ {{$data.time_end}}
+                    {{else /}}
+                        {{:MyLang('no_setup_tips')}}、{{:MyLang('default_title')}}[ 不限制 ]
+                    {{/if}}
+                </div>
+            </div>
+            
+            <a href="{{:PluginsAdminUrl('mourning', 'admin', 'saveinfo')}}" class="am-btn am-btn-secondary am-radius btn-loading-example am-btn-sm am-btn-block edit-submit">{{:MyLang('edit_title')}}</a>
+        </div>
+    </div>
+</div>
+<!-- right content end  -->
+
+<!-- footer start -->
+{{include file="public/footer" /}}
+<!-- footer end -->

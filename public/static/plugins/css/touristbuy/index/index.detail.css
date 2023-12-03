@@ -1,0 +1,253 @@
+/**
+ * 进度
+ */
+ul.progress {
+    margin: 2rem 0;
+}
+ul.progress li {
+    position: relative;
+ }
+ul.progress li i.step {
+    display: block;
+    background-color: #e1e1e1;
+}
+
+ul.progress li .digital {
+    background-color: #f7f7f7;
+    border-radius: 5rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    line-height: 2.6rem;
+    text-align: center;
+    color: #e1e1e1;
+    font-weight: 700;
+    border: 0.6rem solid #e1e1e1;
+}
+
+ul.progress li .base .title {
+    font-weight: 500;
+    color: #666;
+}
+
+ul.progress li .base .date {
+    color: #999;
+}
+
+ul.progress li.steps-success .digital {
+    border: 0.6rem solid #4CAF50;
+    color: #fff;
+}
+ul.progress li.steps-success .digital {
+    background-color: #82cc85;
+}
+ul.progress li.steps-success i.step {
+    background-color: #4CAF50;
+}
+ul.progress li.current .title {
+    color: #4CAF50;
+}
+
+.base-right .icon-tips, .base-right .icon-success {
+    font-size: 5rem;
+}
+.base-right .icon-tips {
+    color: #6980d0;
+}
+.base-right .icon-success {
+    color: #28801c;
+}
+
+@media only screen and (min-width: 641px) {
+    ul.progress {
+        overflow: hidden;
+    }
+    ul.progress li {
+        float: left;
+        width: 20%;
+        text-align: center;
+    }
+    ul.progress li i.step {
+        display: block;
+        height: 0.6rem;
+        width: 100%;
+        position: absolute;
+        margin: 1.5rem 0 0 -50%;
+        z-index: 1;
+    }
+    ul.progress li .digital {
+        position: absolute;
+        margin-left: calc(50% - 1.8rem);
+        z-index: 2;
+    }
+    ul.progress li .base {
+        margin-top: 5rem;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    ul.progress li i.step {
+        height: 6rem;
+        width: 0.6rem;
+        margin-left: 1.5rem;
+    }
+
+    ul.progress li .base {
+        position: absolute;
+        left: 5rem;
+        top: 0;
+    }
+    ul.progress li:not(:first-child) .base {
+        margin-top: 7rem;
+    }
+}
+
+
+/**
+ * 文本列表
+ */
+.items {
+    line-height: 3rem;
+    overflow: hidden;
+}
+.items-detail {
+    color: #666;
+}
+
+
+/**
+ * 订单详情基础
+ */
+.order-base .am-panel {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.order-base .am-panel-bd, .order-base .base-right {
+    padding: 0.5rem 1rem;
+}
+.order-base, .order-base .status {
+    overflow: hidden;
+}
+.order-base .status-name {
+    line-height: 8rem;
+}
+.order-base .operation .am-btn {
+    margin-left: 1.5rem;
+}
+.order-base .logistics {
+    margin-top: 1rem;
+}
+.order-base .am-btn-block {
+    width: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+@media only screen and (min-width: 641px) {
+    .order-base .base-left, .order-base .base-right {
+        width: 50%;
+        float: left;
+    }
+    .order-base {
+        border: 0.1rem solid #ddd;
+    }
+    .order-base .am-panel-default {
+        border-color: #fff;
+    }
+    .order-base .am-panel {
+        border: 0;
+        margin: 0;
+    }
+    .order-base .base-left {
+        border-right: 0.1rem solid #ddd;
+    }
+    .order-base .base-right {
+        padding-top: 0;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .order-base .base-right {
+        border: 0.1rem solid #ddd;
+    }
+}
+
+
+/**
+ * 业务面板
+ */
+.user-content-body .business-panel {
+    margin-top: 2rem;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+
+/**
+ * 支付弹窗
+ */
+.business-item h3 { border-bottom: 0.3rem solid #e3e3e3; margin-top:0.5rem; font-size: 1.4rem;font-weight: 700; }
+.business-item ul { padding: 1rem 0.3rem 0.5rem 0.5rem; overflow: hidden; }
+.business-item ul li { border:0.1rem solid transparent ;overflow: hidden; float: left; cursor: pointer; padding: 0.5rem; border: 0.1rem solid #eee; margin: 0 1rem 1rem 0; }
+.business-item ul  li img { width: 3.6rem; height: 3.6rem; }
+.business-item ul li.selected { border-color: #d2364c ; position: relative; box-shadow: 0px 0 0px 0.1rem #d2364c; }
+.business-item ul li.selected i.icon-active { position: absolute; width: 1rem; height: 1rem; font-size: 0; line-height: 0; right: 0px; bottom: 0px; background: url(../images/sys-item-selected.gif) no-repeat right bottom; }
+@media only screen and (min-width:640px) {
+  .business-item ul li {width:calc(33% - 0.5rem); }
+  .business-item ul li:nth-child(3n) { margin-right: 0; }
+  .business-item ul li:hover { border: 0.1rem solid #d2364c; box-shadow: 0px 0 0px 0.1rem #d2364c; }
+}
+@media only screen and (max-width:640px) {
+  .business-item ul li { width: calc(50% - 0.5rem); }
+  .business-item ul li:nth-child(2n) { margin-right: 0; }
+}
+
+
+/**
+ * 商品列表
+ */
+.order-goods { margin-top: 2rem; }
+.goods-detail img { width: 8rem; height: 8rem; position: absolute; left: 0; top: 0; }
+.goods-detail { position: relative; min-height: 8rem; }
+.goods-title { display: block; max-height: 3.6rem; overflow: hidden; text-overflow: ellipsis; }
+.goods-title:hover { text-decoration: underline; }
+.goods-base { float: left; top: 0; margin-left: 8.5rem; }
+.goods-attr li { color: #888; line-height: 1.6rem; }
+.original-price, .line-price { font-family: Verdana,Tahoma,arial; }
+.original-price { color: #9c9c9c; text-decoration: line-through; }
+.line-price { color: #3c3c3c; }
+.line-price, strong.total-price-content, strong.total-price-content { font-weight: 700; font-family: Verdana,Tahoma,arial; }
+strong.total-price-content { color: #d2364c; }
+.am-table { margin-bottom: 1rem; }
+.am-table > tbody > tr > td { border-top: 0.1rem solid #F5F5F5; }
+.am-table > thead > tr > th { border-bottom: 0.1rem solid #f7f7f7; }
+
+@media only screen and (min-width:640px)  {
+    .cart-content table tr .base { width: 40%; }
+    .cart-content table tr .price { width: 20%; }
+    .cart-content table tr .number { width: 20%; }
+    .cart-content table tr .total-price { width: 20%; }
+    .cart-content { margin-top: 2rem; }
+}
+
+
+/**
+ * 自提点地图
+ */
+#popup-extraction-receive-map .am-popup-bd,
+#map {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+#popup-extraction-receive-map .am-popup-hd {
+    border: 0;
+}
+
+
+/**
+ * 虚拟销售
+ */
+.fictitious-panel-container ul.am-list li:first-child {
+    border-top: 0;
+}
+.fictitious-panel-container ul.am-list li:last-child {
+    border-bottom: 0;
+}

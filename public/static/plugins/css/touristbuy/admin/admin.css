@@ -1,0 +1,11 @@
+/**
+ * 首页
+ */
+.touristbuy-content .items {
+    margin: 1rem 0 2rem 0;
+    border-bottom: 0.1rem dashed #f1f1f1;
+    padding-bottom: 2rem;
+}
+.touristbuy-content .edit-submit {
+    margin-bottom: 2rem;
+}

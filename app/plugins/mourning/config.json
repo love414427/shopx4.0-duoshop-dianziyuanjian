@@ -1,0 +1,35 @@
+{
+    "base":{
+        "plugins":"mourning",
+        "name":"哀悼",
+        "logo":"\/static\/upload\/images\/plugins_mourning\/2020\/04\/03\/1585909554964465.jpg",
+        "author":"Devil",
+        "author_url":"https:\/\/shopxo.net\/",
+        "version":"2.0.0",
+        "desc":"哀悼色调、站点变灰色、可调节灰度值、可配置自动开始结束时间",
+        "apply_terminal":[
+            "pc",
+            "h5"
+        ],
+        "apply_version":[
+            "3.0.0"
+        ],
+        "is_home":false
+    },
+    "hook":{
+        "plugins_common_header":[
+            "app\\plugins\\mourning\\Hook"
+        ],
+        "plugins_service_base_data_return_api_index_index":[
+            "app\\plugins\\mourning\\Hook"
+        ]
+    },
+    "history":[
+        {
+            "host":"shopxo.com",
+            "url":"http:\/\/shopxo.com\/",
+            "ip":"127.0.0.1",
+            "time":"2023-08-27 14:44:27"
+        }
+    ]
+}
